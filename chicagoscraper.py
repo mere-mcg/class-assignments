@@ -24,10 +24,10 @@ def get_html(ward):
     You should save the resulting HTML in a variable called html.
     '''
 
-    url = 'http://www.chicagoelections.com/en/pctlevel3.asp?'
+    url = 'http://www.chicagoelections.com/en/pctlevel3.asp?/elec_code=9&race_number=10&ward'
 
     # we'll talk about this Friday
-    html = requests.get(url, params={'ward,':ward, 'elec_code':'9', 'race_number': '10'}).content
+    html = requests.get(url).content
 
     return html # Leave this line here. Just be sure to call your variable html.
 
