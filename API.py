@@ -34,7 +34,7 @@ def get_votes_by_date(chamber, start_date, end_date):
 
     ###################
 
-    response = requests.get(url, headers={"X-API-Key": API_KEY}).content
+    response = requests.get(url, headers={'chamber': chamber, 'start_date': start_date 'end_date': end_date, "X-API-Key": API_KEY}).content
 
     ###################
 
